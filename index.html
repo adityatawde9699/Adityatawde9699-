@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <div class="toggle-container">
+                <img src="https://img.icons8.com/ios-filled/50/000000/sun.png" alt="Toggle Day/Night Mode" class="toggle-button" id="toggle-icon" onclick="toggleMode()">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! Here you can find information about my projects, skills, and experience.</p>
+            <h2>Projects</h2>
+            <ul id="project-list">
+                <li><strong>Snake Water Gun Game:</strong> A fun and interactive game where you can choose between snake, water, and gun. The game determines the winner based on predefined rules.</li>
+                <li><strong>Calculator:</strong> A simple yet powerful calculator application that can perform basic arithmetic operations like addition, subtraction, multiplication, and division.</li>
+                <li><strong>Price Tag Project:</strong> A Python script to generate price tags for products, including product name, price, and ID, along with a barcode QR code.</li>
+            </ul>
+            <h2>Add a New Project</h2>
+            <form id="project-form">
+                <input type="text" id="project-name" placeholder="Project Name" required>
+                <textarea id="project-description" placeholder="Project Description" required></textarea>
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 My Portfolio</p>
+    </footer>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('toggle-icon');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.src = 'https://img.icons8.com/ios-filled/50/000000/moon-symbol.png';
+            } else {
+                icon.src = 'https://img.icons8.com/ios-filled/50/000000/sun.png';
+            }
+        }
+
+        document.getElementById('project-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const projectName = document.getElementById('project-name').value;
+            const projectDescription = document.getElementById('project-description').value;
+            const projectList = document.getElementById('project-list');
+
+            const newProject = document.createElement('li');
+            newProject.innerHTML = `<strong>${projectName}:</strong> ${projectDescription}`;
+            projectList.appendChild(newProject);
+
+            document.getElementById('project-form').reset();
+        });
+    </script>
+</body>
