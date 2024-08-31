@@ -6,6 +6,7 @@ body {
     color: #fb9039;
     transition: background-color 0.3s, color 0.3s;
 }
+
 header {
     background-color: #1f3044;
     color: #fb9039;
@@ -13,18 +14,22 @@ header {
     text-align: center;
     position: relative;
 }
+
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
+
 .main-content {
     padding: 2rem;
     background: #646c79;
     margin-top: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #fb9039;
+    min-height: calc(100vh - 120px); /* Adjust this value as needed */
 }
+
 footer {
     background-color: #1f3044;
     color: #fb9039;
@@ -35,10 +40,13 @@ footer {
     bottom: 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+
 form {
     margin-top: 2rem;
 }
-form input, form textarea {
+
+form input,
+form textarea {
     width: 100%;
     padding: 0.5rem;
     margin: 0.5rem 0;
@@ -47,6 +55,7 @@ form input, form textarea {
     background-color: #1f3044;
     color: #fb9039;
 }
+
 form button {
     padding: 0.5rem 1rem;
     background-color: #fb9039;
@@ -55,13 +64,16 @@ form button {
     border-radius: 4px;
     cursor: pointer;
 }
+
 form button:hover {
     background-color: #e67e33;
 }
+
 ul {
     list-style-type: none;
     padding: 0;
 }
+
 ul li {
     background: #1f3044;
     margin: 0.5rem 0;
@@ -69,44 +81,54 @@ ul li {
     border-left: 5px solid #fb9039;
     color: #fb9039;
 }
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
     width: 12px;
 }
+
 ::-webkit-scrollbar-track {
     background: #646c79;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: #fb9039;
     border-radius: 6px;
     border: 3px solid #646c79;
 }
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #333;
     color: #f0f0f0;
 }
+
 body.dark-mode .main-content {
     background: #444;
 }
+
 body.dark-mode footer {
     background-color: #222;
 }
+
 .toggle-container {
     position: absolute;
     top: 10px;
     right: 10px;
 }
+
 .toggle-button {
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
+
 /* Additional enhancements */
 .main-content h2 {
     border-bottom: 2px solid #fb9039;
     padding-bottom: 0.5rem;
 }
+
 .main-content p {
     line-height: 1.6;
 }
