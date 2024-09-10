@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -24,21 +27,71 @@
                 <a href="https://github.com/adityatawde9699" target="_blank" rel="noopener">
                     <img src="https://img.icons8.com/?size=60&id=12599&format=png&color=000000" alt="GitHub">
                 </a>
-                <!-- Add more social media icons as needed -->
             </div>
+            <img src="https://th.bing.com/th/id/R.9de14181b1ce10c2f5ea39b8a4469a32?rik=oGRGLfEz36Ezbw&riu=http%3a%2f%2fres.freestockphotos.biz%2fpictures%2f11%2f11251-close-up-portrait-of-a-beautiful-girl-posing-outdoors-pv.jpg&ehk=3bi5%2bZR1T5acN%2fTqDnaIqfonGIZHTT9S%2fu35C%2bUdwQk%3d&risl=&pid=ImgRaw&r=0" alt="Aditya Tawde's profile photo" class="profile-photo">
         </div>
     </header>
     <div class="container">
-        <div class="main-content">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! Here you can find information about my projects, skills, and experience.</p>
+        <section class="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my projects, skills, and more!</p>
+            <button onclick="window.location.href='#contact'">Contact Me</button>
+        </section>
+        <section id="skills" class="main-content">
+            <h2>Skills</h2>
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress" ></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" ></div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="main-content">
             <h2>Projects</h2>
-            <ul id="project-list">
-                <li><strong>Snake Water Gun Game:</strong> A fun and interactive game where you can choose between snake, water, and gun. The game determines the winner based on predefined rules.</li>
-                <li><strong>Calculator:</strong> A simple yet powerful calculator application that can perform basic arithmetic operations like addition, subtraction, multiplication, and division.</li>
-                <li><strong>Price Tag Project:</strong> A Python script to generate price tags for products, including product name, price, and ID, along with a barcode QR code.</li>
-            </ul>
-        </div>
+            <div class="project-gallery">
+                <div class="project-item">
+                    <h3>Snake Water Gun Game</h3>                  
+                    <p>A fun and interactive game where you choose between snake, water, and gun.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Calculator</h3>
+                    <img src="https://img.icons8.com/?size=100&id=6gwMy8qlY6nG&format=png&color=000000" alt="Calculator" class="project-thumbnail">
+                    <p>A simple yet powerful calculator application for basic arithmetic operations.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Price Tag Project</h3>
+                    <img src=https://static.vecteezy.com/system/resources/previews/002/124/591/non_2x/design-price-tag-label-red-with-various-shape-free-vector.jpg alt="Price Tag Project" class="project-thumbnail">
+                    <p>The “Price Tag Project” is all about precision and persuasion...</p>
+                    <!-- Content shortened for brevity -->
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="main-content">
+            <h2>Contact Me</h2>
+            <form action="your-server-endpoint" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <section id="testimonials" class="main-content">
+            <h2>Testimonials</h2>
+            <blockquote>
+                <p>"Aditya's work on the Snake Water Gun Game was impressive and well-executed!"</p>
+                <footer>- Client Name</footer>
+            </blockquote>
+            <blockquote>
+                <p>"The Calculator application was intuitive and very user-friendly. Highly recommend!"</p>
+                <footer>- Another Client</footer>
+            </blockquote>
+        </section>
     </div>
     <footer>
         <p>© 2024 My Portfolio</p>
