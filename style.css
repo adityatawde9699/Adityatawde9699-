@@ -1,6 +1,6 @@
 /* Body and General Styles */
 body {
-    font-family: "Style Script", cursive, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1f3044;
@@ -31,11 +31,11 @@ h1, h2, h3 {
     position: absolute;
     top: 10px;
     left: 10px;
-    right: 6px;
+    right: 15px;
     width: 50px;
     height: auto;
-    border-radius: 50%;
-    margin-top: 1rem;
+    border-radius: 75%;
+    margin-top: 2rem;
 }
 
 /* Container */
@@ -48,20 +48,20 @@ h1, h2, h3 {
 /* Main Content */
 .main-content {
     padding: 2rem;
-    background: linear-gradient(135deg, #6882ac, #1f3044); /* Gradient background */
+    background: linear-gradient(135deg, #6886b6, #1f3044); /* Gradient background */
     margin-top: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     color: #fb9039;
     border-radius: 8px;
-    min-height: calc(100vh - 125px);
+    min-height: inherit;
     animation: fadeIn 1s ease-in; /* Fade-in effect */
 }
 
 /* Fade-in Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
-    to { opacity: 1; }
+    to { opacity: 5; }
 }
 
 /* Footer */
@@ -160,8 +160,8 @@ body.dark-mode footer {
 }
 
 .toggle-button {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 
@@ -200,7 +200,7 @@ body.dark-mode footer {
 /* Skills Section */
 #skills {
     background: #6882ac;
-    padding: 2rem 0;
+    padding: 1rem 2;
     color: #fb9039;
     border-radius: 8px;
 }
@@ -243,9 +243,10 @@ body.dark-mode footer {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-item img {
-
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
     width: 100%;
-    aspect-ratio:3/2;
     height: auto;
     border-radius: 4px;
 }
@@ -332,4 +333,3 @@ blockquote:hover {
         flex: 1 1 100%;
     }
 }
-
