@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-   
 </head>
+
 <body>
     <header>
-        <div class="container">
+        <div class="container header-content">
             <h1>My Portfolio</h1>
             <div class="toggle-container">
                 <img src="https://img.icons8.com/?size=50&id=0pAges62zAXE&format=png&color=000000" alt="Toggle Day/Night Mode" class="toggle-button" id="toggle-icon" onclick="toggleMode()">
             </div>
-           
-            
-            <img src="https://th.bing.com/th/id/R.9de14181b1ce10c2f5ea39b8a4469a32?rik=oGRGLfEz36Ezbw&riu=http%3a%2f%2fres.freestockphotos.biz%2fpictures%2f11%2f11251-close-up-portrait-of-a-beautiful-girl-posing-outdoors-pv.jpg&ehk=3bi5%2bZR1T5acN%2fTqDnaIqfonGIZHTT9S%2fu35C%2bUdwQk%3d&risl=&pid=ImgRaw&r=0" alt="Aditya Tawde's profile photo" class="profile-photo">
+            <img src="https://th.bing.com/th/id/R.9de14181b1ce10c2f5ea39b8a4469a32?rik=oGRGLfEz36Ezbw&riu=http%3a%2f%2fres.freestockphotos.biz%2fpictures%2f11%2f11251-close-up-portrait-of-a-beautiful-girl-posing-outdoors-pv.jpg&ehk=3bi5%2bZR1T5acN%2fTqDnaIqfonGIZHTT9S%2fu35C%2bUdwQk%3d&risl=&pid=ImgRaw&r=0" alt="Profile Photo" class="profile-photo">
         </div>
     </header>
+
     <div class="container">
         <section class="hero">
             <h1>Welcome to my Portfolio</h1>
-            <p>Explore my project-gallery, skills, and more</p>
+            <p>Explore my project gallery, skills, and more</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/aditya-tawde-7a1392315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">
                     <img src="https://img.icons8.com/?size=60&id=114445&format=png&color=000000" alt="LinkedIn">
@@ -36,74 +35,82 @@
             </div>
             <button onclick="window.location.href='#contact'">Contact Me</button>
         </section>
-        <section id="skills" class="main-content">
+
+        <section id="skills" class="main-content skills-section">
             <h2>Skills</h2>
-            <div class="skill">
+            <div class="skill-card">
                 <h3>Python</h3>
                 <div class="progress-bar">
-                    <div class="progress" ></div>
+                    <div class="progress python-progress"></div>
                 </div>
-            <div class="skill">
+            </div>
+            <div class="skill-card">
                 <h3>HTML</h3>
                 <div class="progress-bar">
-                    <div class="progress" ></div>
+                    <div class="progress html-progress"></div>
+                </div>
             </div>
-            </div>
-            <div class="skill">
+            <div class="skill-card">
                 <h3>JavaScript</h3>
                 <div class="progress-bar">
-                    <div class="progress" ></div>
+                    <div class="progress js-progress"></div>
                 </div>
             </div>
         </section>
-        <section id="projects" class="main-content">
+
+        <section id="projects" class="main-content project-section">
             <h2>Projects</h2>
             <div class="project-gallery">
                 <div class="project-item">
-                    <h3>Snake Water Gun Game</h3>                  
+                    <h3>Snake Water Gun Game</h3>
                     <p>The “Snake Water Gun” game is a simple hand game where two players (or a player and the computer) choose one of three shapes: snake, water, or gun. The winner of each round is determined based on the rules: snake beats water, water beats gun, and gun beats snake.</p>
                 </div>
                 <div class="project-item">
                     <h3>Calculator</h3>
                     <img src="https://img.icons8.com/?size=100&id=6gwMy8qlY6nG&format=png&color=000000" alt="Calculator" class="project-thumbnail">
-                    <p>A simple yet powerful calculator application for basic arithmetic operations.I developed a versatile calculator application using Python. This project showcases my problem-solving skills and understanding of basic algorithms.</p>
+                    <p>A simple yet powerful calculator application for basic arithmetic operations. I developed a versatile calculator application using Python. This project showcases my problem-solving skills and understanding of basic algorithms.</p>
                 </div>
                 <div class="project-item">
                     <h3>Price Tag Project</h3>
-                    <img src=https://static.vecteezy.com/system/resources/previews/002/124/591/non_2x/design-price-tag-label-red-with-various-shape-free-vector.jpg alt="Price Tag Project" class="project-thumbnail">
-                    <p>The “Price Tag Project” is all about precision and persuasion. a Python program that generates price tags for products. This project demonstrates my ability to handle data formatting and create user-friendly output.</p>
-                    <!-- Content shortened for brevity -->
+                    <img src="https://static.vecteezy.com/system/resources/previews/002/124/591/non_2x/design-price-tag-label-red-with-various-shape-free-vector.jpg" alt="Price Tag Project" class="project-thumbnail">
+                    <p>The “Price Tag Project” is all about precision and persuasion. It’s a Python program that generates price tags for products. This project demonstrates my ability to handle data formatting and create user-friendly output.</p>
                 </div>
             </div>
         </section>
-        <section id="contact" class="main-content">
+
+        <section id="contact" class="main-content contact-section">
             <h2>Contact Me</h2>
-            <form action="your-server-endpoint" method="post">
+            <form action="your-server-endpoint" method="post" class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
-        <section id="testimonials" class="main-content">
+
+        <section id="testimonials" class="main-content testimonials-section">
             <h2>Testimonials</h2>
-            <blockquote>
+            <blockquote class="testimonial">
                 <p>"Aditya's work on the Snake Water Gun Game was impressive and well-executed!"</p>
-                <footer>-Samarthsheth  Gadekar</footer>
+                <footer>- Samarthsheth Gadekar</footer>
             </blockquote>
-            <blockquote>
+            <blockquote class="testimonial">
                 <p>"The Calculator application was intuitive and very user-friendly. Highly recommend!"</p>
                 <footer>- John Wick</footer>
             </blockquote>
-            <blockquote>
-                <p>"Price tag generator is most efficient. Highly recommend!"</p>
+            <blockquote class="testimonial">
+                <p>"The price tag generator is most efficient. Highly recommend!"</p>
                 <footer>- Dada Kondke</footer>
             </blockquote>
         </section>
     </div>
+
     <footer>
-        <p>© 2024 My Portfolio</p>
+        <div class="footer-content">
+            <p>© 2024 My Portfolio</p>
+        </div>
     </footer>
+
     <script>
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
