@@ -79,6 +79,17 @@ footer {
 footer p {
     margin: 0;
 }
+.footer-content {
+    margin-top: 10px;
+}
+.footer-content a {
+    color: #fb9039;
+    text-decoration: none;
+}
+.footer-content a:hover {
+    color: #e67e33;
+    text-decoration: underline;
+}
 
 /* Buttons */
 button, .project-item button {
@@ -218,8 +229,16 @@ body.dark-mode footer {
 .progress {
     background: #fb9039;
     height: 100%;
-    width: 90%;
     transition: width 0.3s;
+}
+.python-progress {
+    width: 90%;
+}
+.html-progress {
+    width: 85%;
+}
+.js-progress {
+    width: 75%;
 }
 
 /* Project Gallery */
@@ -323,6 +342,11 @@ blockquote:hover {
     .project-item {
         flex: 1 1 calc(50% - 1rem);
     }
+    .sidebar {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -331,5 +355,12 @@ blockquote:hover {
     }
     .project-item {
         flex: 1 1 100%;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.5rem;
+    }
+    .article-card img {
+        max-height: 150px;
     }
 }
