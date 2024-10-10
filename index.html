@@ -3,122 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="description" content="My portfolio showcasing skills, projects, and contact information.">
+    <meta name="keywords" content="portfolio, web developer, projects, skills, contact, blog, testimonials">
+    <meta name="author" content="Your Name">
+    <link rel="canonical" href="https://yourwebsite.com/">
+    <title>My Portfolio - Aditya Tawde</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Merriweather|Arial" as="style">
 </head>
-
-<body>
+<body onload="loadTheme()">
     <header>
-        <div class="container header-content">
-            <h1>My Portfolio</h1>
-            <div class="toggle-container">
-                <img src="https://img.icons8.com/?size=50&id=0pAges62zAXE&format=png&color=000000" alt="Toggle Day/Night Mode" class="toggle-button" id="toggle-icon" onclick="toggleMode()">
-            </div>
-            <img src="https://th.bing.com/th/id/R.9de14181b1ce10c2f5ea39b8a4469a32?rik=oGRGLfEz36Ezbw&riu=http%3a%2f%2fres.freestockphotos.biz%2fpictures%2f11%2f11251-close-up-portrait-of-a-beautiful-girl-posing-outdoors-pv.jpg&ehk=3bi5%2bZR1T5acN%2fTqDnaIqfonGIZHTT9S%2fu35C%2bUdwQk%3d&risl=&pid=ImgRaw&r=0" alt="Profile Photo" class="profile-photo">
-        </div>
+        <h1>My Portfolio</h1>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Navigation" aria-expanded="false">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </nav>
+        <nav id="mobile-nav" aria-label="Mobile Navigation" aria-expanded="false">
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <section class="hero">
-            <h1>Welcome to my Portfolio</h1>
-            <p>Explore my project gallery, skills, and more</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/aditya-tawde-7a1392315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">
-                    <img src="https://img.icons8.com/?size=60&id=114445&format=png&color=000000" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/adityasuniltawde" target="_blank" rel="noopener">
-                    <img src="https://img.icons8.com/?size=60&id=aimNrfnvOM9T&format=png&color=000000" alt="Instagram">
-                </a>
-                <a href="https://github.com/adityatawde9699" target="_blank" rel="noopener">
-                    <img src="https://img.icons8.com/?size=60&id=12599&format=png&color=000000" alt="GitHub">
-                </a>
-            </div>
-            <button onclick="window.location.href='#contact'">Contact Me</button>
+    <main class="container">
+        <section class="hero" aria-labelledby="hero-heading">
+            <h2 id="hero-heading">Welcome to My Portfolio</h2>
+            <p>Explore my project gallery, skills, and more.</p>
+            <button onclick="window.location.href='#contact'" aria-label="Contact Me">Contact Me</button>
         </section>
 
-        <section id="skills" class="main-content skills-section">
-            <h2>Skills</h2>
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
             <div class="skill-card">
                 <h3>Python</h3>
-                <div class="progress-bar">
-                    <div class="progress python-progress"></div>
-                </div>
+                <div class="progress-bar"><div class="progress python-progress"></div></div>
             </div>
             <div class="skill-card">
                 <h3>HTML</h3>
-                <div class="progress-bar">
-                    <div class="progress html-progress"></div>
-                </div>
+                <div class="progress-bar"><div class="progress html-progress"></div></div>
             </div>
             <div class="skill-card">
                 <h3>JavaScript</h3>
-                <div class="progress-bar">
-                    <div class="progress js-progress"></div>
-                </div>
+                <div class="progress-bar"><div class="progress js-progress"></div></div>
             </div>
         </section>
 
-        <section id="projects" class="main-content project-section">
-            <h2>Projects</h2>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
             <div class="project-gallery">
-                <div class="project-item">
-                    <h3>Snake Water Gun Game</h3>
-                    <p>The “Snake Water Gun” game is a simple hand game where two players (or a player and the computer) choose one of three shapes: snake, water, or gun. The winner of each round is determined based on the rules: snake beats water, water beats gun, and gun beats snake.</p>
-                </div>
-                <div class="project-item">
-                    <h3>Calculator</h3>
-                    <img src="https://img.icons8.com/?size=100&id=6gwMy8qlY6nG&format=png&color=000000" alt="Calculator" class="project-thumbnail">
-                    <p>A simple yet powerful calculator application for basic arithmetic operations. I developed a versatile calculator application using Python. This project showcases my problem-solving skills and understanding of basic algorithms.</p>
-                </div>
-                <div class="project-item">
-                    <h3>Price Tag Project</h3>
-                    <img src="https://static.vecteezy.com/system/resources/previews/002/124/591/non_2x/design-price-tag-label-red-with-various-shape-free-vector.jpg" alt="Price Tag Project" class="project-thumbnail">
-                    <p>The “Price Tag Project” is all about precision and persuasion. It’s a Python program that generates price tags for products. This project demonstrates my ability to handle data formatting and create user-friendly output.</p>
-                </div>
+                <article class="project-item" aria-labelledby="project1-heading">
+                    <h3 id="project1-heading">Snake Water Gun Game</h3>
+                    <p>A simple Python game based on snake, water, and gun choices.</p>
+                </article>
+                <article class="project-item" aria-labelledby="project2-heading">
+                    <h3 id="project2-heading">Calculator</h3>
+                    <p>A versatile calculator application developed in Python.</p>
+                </article>
+                <article class="project-item" aria-labelledby="project3-heading">
+                    <h3 id="project3-heading">Price Tag Project</h3>
+                    <p>A Python program for generating price tags.</p>
+                </article>
             </div>
         </section>
 
-        <section id="contact" class="main-content contact-section">
-            <h2>Contact Me</h2>
-            <form action="your-server-endpoint" method="post" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <section id="blog" aria-labelledby="blog-heading">
+            <h2 id="blog-heading">Blog</h2>
+            
+            <!-- Cybersecurity Tips Blog Post -->
+            <div class="blog-post" aria-labelledby="blog1-heading">
+                <h3 id="blog1-heading">Staying Safe in the Digital Age: Essential Cybersecurity Tips</h3>
+                <p>
+                    In today's fast-paced digital world, cybersecurity has never been more critical. With every click, swipe, and tap, we potentially expose ourselves to cyber threats. However, by following some essential cybersecurity practices, we can significantly reduce our risks and protect our data. Here are some tips to keep you safe online:
+                </p>
+        
+                <ol>
+                    <li><strong>Use Strong Passwords</strong><br>
+                        Creating unique and complex passwords for each of your accounts is a fundamental step in securing your online presence. Avoid using easily guessable information like birthdays or common words. Instead, opt for a mix of uppercase letters, lowercase letters, numbers, and special characters. Tools like password managers can help you generate and store these securely.
+                    </li>
+        
+                    <li><strong>Enable Two-Factor Authentication (2FA)</strong><br>
+                        Two-factor authentication adds an extra layer of security by requiring a second form of verification, such as a text message or authentication app code. Even if someone manages to get your password, they won't be able to access your account without this additional piece of information.
+                    </li>
+        
+                    <li><strong>Keep Software Updated</strong><br>
+                        Software updates often include patches for security vulnerabilities. Regularly updating your operating system, browsers, and apps ensures you have the latest protections against potential threats. Enable automatic updates where possible to stay secure without even having to think about it.
+                    </li>
+        
+                    <li><strong>Be Cautious with Links and Attachments</strong><br>
+                        Cybercriminals often use phishing emails to trick you into clicking on malicious links or downloading harmful attachments. Always verify the sender’s email address and be wary of unexpected messages. When in doubt, don't click.
+                    </li>
+        
+                    <li><strong>Use a VPN</strong><br>
+                        When connecting to public Wi-Fi, a Virtual Private Network (VPN) can protect your data from being intercepted by hackers. A VPN encrypts your internet connection, making it much harder for cybercriminals to access your information.
+                    </li>
+        
+                    <li><strong>Backup Your Data</strong><br>
+                        Regularly backing up your data ensures you won't lose important information in case of a cyber attack or hardware failure. Use a combination of cloud services and external drives to keep your backups secure and easily accessible.
+                    </li>
+        
+                    <li><strong>Secure Your Devices</strong><br>
+                        Set up strong passcodes, fingerprint locks, or facial recognition on your devices. This extra layer of security can prevent unauthorized access to your personal information if your device is lost or stolen.
+                    </li>
+        
+                    <li><strong>Be Aware of Phishing Scams</strong><br>
+                        Phishing scams are designed to trick you into providing personal information by pretending to be from a legitimate source. Be cautious of emails, messages, or websites that ask for sensitive information, and verify their authenticity before responding.
+                    </li>
+        
+                    <li><strong>Limit Personal Information Sharing</strong><br>
+                        Be mindful of the information you share on social media and other online platforms. Cybercriminals can use this information to build profiles and target you with scams. Adjust your privacy settings to control who can see your posts and personal details.
+                    </li>
+        
+                    <li><strong>Use Antivirus Software</strong><br>
+                        Install and regularly update antivirus software to protect against malware. These programs can detect, quarantine, and remove malicious files that could compromise your data.
+                    </li>
+                </ol>
+        
+                <p>By following these cybersecurity tips, you can help protect yourself and your data in the digital age. Stay vigilant and stay safe!</p>
+            </div>
+            
+        </section>
+        
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <form action="https://example.com/submit" method="post" aria-label="Contact Form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
 
-        <section id="testimonials" class="main-content testimonials-section">
-            <h2>Testimonials</h2>
-            <blockquote class="testimonial">
-                <p>"Aditya's work on the Snake Water Gun Game was impressive and well-executed!"</p>
+        <section id="testimonials" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading">Testimonials</h2>
+            <blockquote>
+                <p>"Amazing work on the Python projects!"</p>
                 <footer>- Samarthsheth Gadekar</footer>
             </blockquote>
-            <blockquote class="testimonial">
-                <p>"The Calculator application was intuitive and very user-friendly. Highly recommend!"</p>
-                <footer>- John Wick</footer>
-            </blockquote>
-            <blockquote class="testimonial">
-                <p>"The price tag generator is most efficient. Highly recommend!"</p>
-                <footer>- Dada Kondke</footer>
-            </blockquote>
         </section>
-    </div>
+    </main>
 
     <footer>
-        <div class="footer-content">
-            <p>© 2024 My Portfolio</p>
-        </div>
+        <p>© 2024 My Portfolio | <a href="https://example.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a></p>
     </footer>
 
-    <script>
+    <script src="script.js" defer>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            // Toggle aria-expanded attribute for accessibility
+            const expanded = hamburgerMenu.getAttribute('aria-expanded') === 'true' || false;
+            hamburgerMenu.setAttribute('aria-expanded', !expanded);
+            mobileNav.setAttribute('aria-expanded', !expanded);
+        });
+
         function toggleMode() {
             document.body.classList.toggle('dark-mode');
-            const icon = document.getElementById('toggle-icon');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.src = 'https://img.icons8.com/?size=50&id=33207&format=png&color=000000';
-            } else {
-                icon.src = 'https://img.icons8.com/?size=50&id=0pAges62zAXE&format=png&color=000000';
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+
+        function loadTheme() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
             }
         }
     </script>
