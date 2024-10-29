@@ -5,30 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My portfolio showcasing skills, projects, and contact information.">
     <meta name="keywords" content="portfolio, web developer, projects, skills, contact, blog, testimonials">
-    <meta name="author" content="Your Name">
-    <link rel="canonical" href="https://yourwebsite.com/">
+    <meta name="author" content="Aditya Tawde">
+    
     <title>My Portfolio - Aditya Tawde</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Merriweather|Arial" as="style">
 </head>
+
 <body onload="loadTheme()">
     <header>
         <h1>My Portfolio</h1>
-        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Navigation" aria-expanded="false">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
         <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
-        </nav>
-        <nav id="mobile-nav" aria-label="Mobile Navigation" aria-expanded="false">
             <ul>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -60,6 +46,10 @@
                 <h3>JavaScript</h3>
                 <div class="progress-bar"><div class="progress js-progress"></div></div>
             </div>
+            <div class="skill-card">
+                <h3>Java</h3>
+                <div class="progress-bar"><div class="progress Java-progress"></div></div>
+            </div>
         </section>
 
         <section id="projects" aria-labelledby="projects-heading">
@@ -82,7 +72,6 @@
 
         <section id="blog" aria-labelledby="blog-heading">
             <h2 id="blog-heading">Blog</h2>
-            
             <!-- Cybersecurity Tips Blog Post -->
             <div class="blog-post" aria-labelledby="blog1-heading">
                 <h3 id="blog1-heading">Staying Safe in the Digital Age: Essential Cybersecurity Tips</h3>
@@ -137,7 +126,6 @@
             
         </section>
         
-
         <section id="contact" aria-labelledby="contact-heading">
             <h2 id="contact-heading">Contact Me</h2>
             <form action="https://example.com/submit" method="post" aria-label="Contact Form">
@@ -161,32 +149,9 @@
     </main>
 
     <footer>
-        <p>© 2024 My Portfolio | <a href="https://example.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a></p>
+        <p>|  © 2024 My Portfolio  |</p>
     </footer>
 
-    <script src="script.js" defer>
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const mobileNav = document.getElementById('mobile-nav');
-
-        hamburgerMenu.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-            // Toggle aria-expanded attribute for accessibility
-            const expanded = hamburgerMenu.getAttribute('aria-expanded') === 'true' || false;
-            hamburgerMenu.setAttribute('aria-expanded', !expanded);
-            mobileNav.setAttribute('aria-expanded', !expanded);
-        });
-
-        function toggleMode() {
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-        }
-
-        function loadTheme() {
-            const theme = localStorage.getItem('theme');
-            if (theme === 'dark') {
-                document.body.classList.add('dark-mode');
-            }
-        }
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
