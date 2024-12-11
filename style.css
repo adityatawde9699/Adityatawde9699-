@@ -51,37 +51,52 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 100px 20px;
+    padding: 10px 5px;
     text-align: center;
-    background-color: #2980b9;
-    color: #fff;
+    background-color:  #bdc3c7;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    
 }
-
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 20px;
+    
 }
-
-.hero button {
+.profile img{
+    width: 300px;
+    height: 300px;
+    border-radius: 85%;
+    margin: auto;
+    
+}
+.hero h1 {
     padding: 10px 20px;
-    background-color: #fff;
-    color: #2980b9;
+    background-color: transparent;
+    
+    color: #1f1d1d;
+    font-size: medium;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s;
 }
 
-.hero button:hover {
-    background-color: #f2f2f2;
+.hero p:hover {
+    transform: scale(1.15);
+    transition: transform 0.3s;
 }
 
 /* Skills Section */
@@ -253,53 +268,6 @@ header nav ul li a:hover {
     color: #fff;
 }
 
-/* Contact Form */
-#contact-form {
-    padding: 60px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-#contact-form h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #dcdcdc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-button[type="submit"] {
-    background-color: #2980b9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #3498db;
-}
 /* Testimonials Section */
 #testimonials {
     background: #2980b9; /* Testimonials section background */
@@ -318,9 +286,6 @@ blockquote {
 blockquote:hover {
     transform: translateY(-2px); /* Lift effect on hover */
 }
-
-
-/* Footer */
 /* Footer */
 footer {
     background-color: #2980b9; /* Footer background */
